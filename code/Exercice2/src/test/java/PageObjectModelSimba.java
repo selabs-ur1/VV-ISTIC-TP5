@@ -1,18 +1,7 @@
-## Page Object Model
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-The image below shows the poll page of the [Simba Organizer](https://github.com/barais/doodlestudent/) application discussed in classes.
-
-![Simba Organizer Poll page](simba-poll-page.png)
-
-Write in this document the interface of a page object class for this page.
-
-## Answer
-
-Les tests associés à ce Page Object se trouve dans le dossier [code](../code/Exercice2).
-
-`````java
 public class PageObjectModelSimba {
-    
     private WebDriver driver ;
 
     public PageObjectModelSimba(WebDriver driver){
@@ -22,7 +11,6 @@ public class PageObjectModelSimba {
     public void nomParticipant(String value) {
         driver.findElement(By.id("nom")).sendKeys(value);
     }
-    
     public void emailParticipant(String value) {
         driver.findElement(By.id("mail")).sendKeys(value);
     }
@@ -30,15 +18,12 @@ public class PageObjectModelSimba {
     public void commentDescription(String value) {
         driver.findElement(By.id("commentdesc")).sendKeys(value);
     }
-    
     public void soumettreVoeux() {
        driver.findElement(By.xpath("/html/body/app-root/app-answer-poll/div/p-card/div/div/div[3]/div[2]/div[6]/p-button/button")).click();
     }
-    
     public void comment(String value) {
         driver.findElement(By.xpath("//*[@id=\"comment\"]")).sendKeys(value);
     }
-    
     public void fluxICS() {
         driver.findElement(By.xpath("/html/body/app-root/app-answer-poll/div/p-card/div/div/div[3]/div[2]/div[3]/p-inputswitch/div/span")).click();
     }
@@ -46,7 +31,6 @@ public class PageObjectModelSimba {
     public void fluxICSURL(String value) {
         driver.findElement(By.xpath("//*[@id=\"ics\"]")).sendKeys(value);
     }
-    
     public void ajouterCommentaire() {
         driver.findElement(By.xpath("/html/body/app-root/app-answer-poll/div/p-card/div/div/div[4]/div/div[3]/p-button/button")).click();
     }
@@ -54,7 +38,6 @@ public class PageObjectModelSimba {
     public void vueTableau() {
         driver.findElement(By.xpath("/html/body/app-root/app-answer-poll/div/p-card/div/div/div[3]/div[2]/div[4]/p-selectbutton/div/div[2]")).click();
     }
-    
     public void vueCalendrier() {
         driver.findElement(By.xpath("/html/body/app-root/app-answer-poll/div/p-card/div/div/div[3]/div[2]/div[4]/p-selectbutton/div/div[1]")).click();
     }
@@ -62,9 +45,9 @@ public class PageObjectModelSimba {
     public void preferencesAlimentaires() {
         driver.findElement(By.xpath("/html/body/app-root/app-answer-poll/div/p-card/div/div/div[3]/div[2]/div[4]/p-inputswitch/div/span")).click();
     }
-    
     public void preferencesAlimentairesDescription(String value) {
         driver.findElement(By.xpath("//*[@id=\"desc\"]")).sendKeys(value);
     }
+
+
 }
-`````

@@ -1,19 +1,14 @@
-# Random Wikipedia walker
+import org.apache.commons.io.FileUtils;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.*;
+import org.openqa.selenium.safari.SafariDriver;
 
-Using Selenium, create a small program that, starting from the main page https://www.wikipedia.org/, walks trough a sequence of random links and takes a snapshot of the last page.
-The process is as follows:
+import java.io.File;
+import java.util.List;
+import java.util.Random;
 
- 1. Navigate to the main page https://www.wikipedia.org/
- 2. Select a random link in the page
- 3. Navigate to the link
- 4. Repeat steps 2 to 3 until you have visited 10 different pages
- 5. Take a snapshot of the current page and save it
-
-Include the code of the walker and the snapshot in this document.
-
-## Answer
-
-````java
 public class TestWikipedia {
 
     private WebDriver driver;
@@ -59,8 +54,5 @@ public class TestWikipedia {
             e.printStackTrace();
         }
     }
-}
-````
-Après avoir parcouru 10 pages, on arrive sur une page aléatoire de Wikipédia. Pour éviter de sortir de ``wikipedia.org``, nous avons ajouté un filtre pour ne cliquer que sur les liens internes.
 
-![Screenshot après 10 pages](../code/Exercice1/screenshot.png)
+}

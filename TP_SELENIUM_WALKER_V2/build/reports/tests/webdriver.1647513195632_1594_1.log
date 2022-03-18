@@ -1,0 +1,177 @@
+[1647513195.748][INFO]: Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 17687
+[1647513195.748][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1647513196.111][INFO]: [044a6585902c7fef1be96a05c4b79106] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "/Users/francoisrousseaux/IdeaProjects/TP_SELENIUM_WALKER_V2/build/downloads/1647513195506_1594_1",
+               "plugins.always_open_pdf_externally": true,
+               "profile.default_content_setting_values.automatic_downloads": 1
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "/Users/francoisrousseaux/IdeaProjects/TP_SELENIUM_WALKER_V2/build/downloads/1647513195506_1594_1",
+            "plugins.always_open_pdf_externally": true,
+            "profile.default_content_setting_values.automatic_downloads": 1
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1647513196.113][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "/Users/francoisrousseaux/IdeaProjects/TP_SELENIUM_WALKER_V2/build/downloads/1647513195506_1594_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "automatic_downloads": 1,
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1647513196.113][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1647513196.113][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --allow-pre-commit-input --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/2c/yfft84013l35v1w84h2cpxvc0000gn/T/.com.google.Chrome.XwkV2g data:,
+[1647513197.357][INFO]: resolved localhost to ["127.0.0.1","::1"]
+[1647513197.361][INFO]: resolved localhost to ["127.0.0.1","::1"]
+[1647513197.382][INFO]: [044a6585902c7fef1be96a05c4b79106] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "99.0.4844.74",
+      "chrome": {
+         "chromedriverVersion": "99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875})",
+         "userDataDir": "/var/folders/2c/yfft84013l35v1w84h2cpxvc0000gn/T/.com.google.Chrome.XwkV2g"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:57952"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "mac os x",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "044a6585902c7fef1be96a05c4b79106"
+}
+[1647513197.481][INFO]: [044a6585902c7fef1be96a05c4b79106] COMMAND MaximizeWindow {
+
+}
+[1647513197.481][INFO]: Waiting for pending navigations...
+[1647513197.483][INFO]: Done waiting for pending navigations. Status: ok
+[1647513197.600][INFO]: Waiting for pending navigations...
+[1647513197.601][INFO]: Done waiting for pending navigations. Status: ok
+[1647513197.601][INFO]: [044a6585902c7fef1be96a05c4b79106] RESPONSE MaximizeWindow {
+   "height": 824,
+   "width": 1440,
+   "x": 0,
+   "y": 23
+}
+[1647513197.634][INFO]: [044a6585902c7fef1be96a05c4b79106] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1647513197.634][INFO]: [044a6585902c7fef1be96a05c4b79106] RESPONSE SetTimeouts
+[1647513197.661][INFO]: [044a6585902c7fef1be96a05c4b79106] COMMAND Navigate {
+   "url": "http://localhost:4200/create"
+}
+[1647513197.661][INFO]: Waiting for pending navigations...
+[1647513197.663][INFO]: Done waiting for pending navigations. Status: ok
+[1647513197.748][INFO]: Waiting for pending navigations...
+[1647513198.288][INFO]: Done waiting for pending navigations. Status: ok
+[1647513198.288][INFO]: [044a6585902c7fef1be96a05c4b79106] RESPONSE Navigate
+[1647513198.293][INFO]: [044a6585902c7fef1be96a05c4b79106] COMMAND Quit {
+
+}
+[1647513198.345][INFO]: [044a6585902c7fef1be96a05c4b79106] RESPONSE Quit

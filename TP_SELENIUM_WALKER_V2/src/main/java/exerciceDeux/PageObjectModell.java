@@ -1,19 +1,7 @@
-## Page Object Model
-
-The image below shows the poll page of the [Simba Organizer](https://github.com/barais/doodlestudent/) application discussed in classes.
-
-![Simba Organizer Poll page](simba-poll-page.png)
-
-Write in this document the interface of a page object class for this page.
-
-## Answer
-[Mes réponses](../TP_SELENIUM_WALKER_V2/src/main/java/exerciceDeux/PageObjectModell.java)
-
 package exerciceDeux;
 
 import java.util.List;
 
-``java
 public interface PageObjectModell {
 
     // Access menu
@@ -84,4 +72,3 @@ public interface PageObjectModell {
     PageObjectModell submitCommentsExpectingErrors();
 
 }
-```

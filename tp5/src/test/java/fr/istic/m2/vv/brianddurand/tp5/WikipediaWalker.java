@@ -13,6 +13,10 @@ import java.util.*;
 public class WikipediaWalker {
 
     @Test
+    /**
+     * Ce 'test' parcourt jusqu'a 10 pages en partant d'une page wikipédia aléatoire
+     * A la fin du parcours une capture d'écran sera prise et stockée dans le dossier 'images'.
+     */
     void walkOnWikipedia() throws IOException {
 
         // Création du webdriver et ouverture de wikipedia

@@ -1,20 +1,21 @@
-## Find a bug
+package fr.istic.m2.vv.brianddurand.tp5;
 
-Clone the [Simba Organizer repository](https://github.com/barais/doodlestudent/) and follow the instructions to run the application on your machine.
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-Find a bug in the application. 
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Locale;
 
-With the help of Selenium and the Page Object Model desing pattern write a simple test that fails for this bug.
-
-Optionally make a pull request to the project.
-
-Include in this document the code of the test and, if you did it, the link to the pull request.
-
-## Answer
-L'application présente un formulaire lors de la création du poll. Pour passer à la page suivante (click sur le bouton next), une vérification est effectuée pour que les champs du formulaire soient renseignés. Cette vérification n'est pas menée si nous cliquons directement sur le point 3: Résumé.
-
-Pour tester ce bug le [code](../tp5/src/test/java/fr/istic/m2/vv/brianddurand/tp5/TestNavigationEmptyFields.java) est le suivant:
-```java
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestNavigationEmptyFields {
 
@@ -55,6 +56,3 @@ public class TestNavigationEmptyFields {
     }
 
 }
-```
-Aussi, à la fin de l'execution d'un test, une snapshot est prise. Cela peut servir à mieux comprendre ce qu'il s'est passé. ([exemple](../tp5/images/simba-2022-3-18-23-5-28.png))
-

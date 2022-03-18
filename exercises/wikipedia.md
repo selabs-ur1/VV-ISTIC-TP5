@@ -12,3 +12,31 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+```
+
+public class WikipediaWalker {
+
+    public static void main(String[] args) {
+
+        
+        WebDriverManager.chromedriver().setup();
+        WebDriver chrome = new ChromeDriver();
+        chrome.get("https://en.wikipedia.org/wiki/Gravity_of_Mars");
+        
+        String url;
+        
+        for(int i = 0; i<10;i++) {
+        	List<WebElement> listLinks = chrome.findElements(By.xpath("//main//a[@href]"));
+        	int chosenValue = new Random().nextInt(listLinks.size());
+            url = listLinks.get(chosenValue).getAttribute("href");
+            chrome.get(url);
+        }
+
+        // SCREENSHOT TO DO
+
+        chrome.quit();
+    }
+
+}
+```

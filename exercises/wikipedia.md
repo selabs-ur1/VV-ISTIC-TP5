@@ -12,3 +12,5 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+Le code est disponible [ici](tp5/src/test/java/fr/istic/m2/vv/brianddurand/tp5/WikipediaWalker.java).
+Le résultat de l'execution du walker est disponible ![ici](C:\Users\cleme\IdeaProjects\cours\VV-ISTIC-TP5\tp5\images\wikipedia-2022-3-18-15-0-44.png). Les captures sont nommées avec la date de jeu. Aussi, les adresses visitées sont écrite dans la console si on souhaite reproduire le parcours.

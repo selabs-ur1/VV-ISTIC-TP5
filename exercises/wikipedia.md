@@ -12,3 +12,6 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+The code of the walker is available [here](/code/tp5-random-wikipedia-walker/src/main/java/fr/istic/vv/RandomWikipediaWalker.java)
+The snapshot is available [here](/code/tp5-random-wikipedia-walker/wikipediaPage.png)

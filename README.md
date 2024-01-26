@@ -1,15 +1,14 @@
-# Validation and Verification: Practical Session
+# TP5
 
-This practical session will help to better understand GUI testing, and in particular the tool Selenium
+**Auteurs:**
+- PICARD Florian
+- ECKENSCHWILLER Hugo
 
-## Exercises
+## PageObject
 
-You can access the exercises [here](sujet.md)
+J'ai écrit dans la classe ci-jointe le page object correspondant à l'application. J'ai ainsi pu créer une liaison entre l'application et mon code qui va pouvoir se lier aux boutons, input... Je vais pouvoir tester le bon fonctionnement des boutons de la page de l'interface ainsi que le bon fonctionnement des input.
 
-## Lab implementation
+## findABug
 
-You can realize this lab by group of 1 or 2. 
+Un des bugs que j'ai trouvé est que l'appui sur le bouton "next" de la page avec le choix de la date ne fait rien. Pour ma part, le poll semble toujours null, ce qui peut expliquer que le clic sur ce bouton marche bien. J'en déduis donc que le bouton marche correctement, mais que simplement la méthode associée au `onClick` du bouton ne semble pas marcher.
 
-## Deliverable and evaluation
-
-Students are free to realize either this practical work or the [TP4](https://github.com/selabs-ur1/VV-ISTIC-TP4). We will mark the chosen lab. You need to fork this repository and to submit a pull request with the answers written in the dedicated sections (deadline January 29th 2024, 23:59 for apprenticeship students - deadline January 15th 2024, 23:59 for non-apprenticeship students).

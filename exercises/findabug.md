@@ -4,7 +4,7 @@ Clone the [Simba Organizer repository](https://github.com/selabs-ur1/doodle) and
 
 Find a bug in the application. 
 
-With the help of Selenium and the Page Object Model desing pattern write a simple test that fails for this bug.
+With the help of Selenium and the Page Object Model design pattern write a simple test that fails for this bug.
 
 Optionally make a pull request to the project.
 
@@ -12,4 +12,4 @@ Include in this document the code of the test and, if you did it, the link to th
 
 ## Answer
 
-
+Even though we tried multiple times, we never managed to run the application on our machine. 

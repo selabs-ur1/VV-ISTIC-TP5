@@ -12,3 +12,6 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+You can see the code in the code folder ![Here](https://github.com/lise-rg/VV-ISTIC-TP5/tree/main/Code/WikipediaCode.py)
+And you can find the picture in the exercise folder ![Here](https://github.com/lise-rg/VV-ISTIC-TP5/tree/main/exercises/screenshot.png)
+

@@ -12,3 +12,42 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+### Code 
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+import random
+
+driver = webdriver.Chrome()  # Make sure you have ChromeDriver installed and in your PATH
+
+driver.get("https://www.wikipedia.org/")
+
+for i in range(10):
+    # Find all links on the page
+    links = driver.find_elements(By.TAG_NAME, "a")
+
+    # Filter out links that do not have an href attribute
+    valid_links = [link for link in links if link.get_attribute("href")]
+
+    if not valid_links:
+        break
+
+    random_link = random.choice(valid_links)
+
+    link_url = random_link.get_attribute("href")
+
+    driver.get(link_url)
+
+    time.sleep(2)
+
+driver.save_screenshot("snapshot.png")
+
+driver.quit()
+```
+
+### Snapshot Result
+
+![image](https://github.com/Gham0n/VV-ISTIC-TP5/assets/124994183/394c7031-57da-44e1-b86d-79e4756e749e)

@@ -1,5 +1,9 @@
 # Validation and Verification: Practical Session
 
+Yoann DEWILDE\
+Enora DANILO\
+M2 ILa - Groupe 1
+
 This practical session will help to better understand GUI testing, and in particular the tool Selenium
 
 ## Exercises
@@ -9,6 +13,10 @@ You can access the exercises [here](sujet.md)
 ## Lab implementation
 
 You can realize this lab by group of 1 or 2. 
+
+Yoann Dewilde  
+Enora Danilo  
+M2 ILa - Groupe 1  
 
 ## Deliverable and evaluation
 

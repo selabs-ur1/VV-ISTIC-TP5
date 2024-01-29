@@ -1,25 +1,22 @@
-# Random Wikipedia walker
+package fr.istic.ydewilde;
 
-Yoann DEWILDE\
-Enora DANILO\
-M2 ILa - Groupe 1
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.Duration;
+import java.util.List;
 
-Using Selenium, create a small program that, starting from the main page https://www.wikipedia.org/, walks trough a sequence of random links and takes a snapshot of the last page.
-The process is as follows:
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
- 1. Navigate to the main page https://www.wikipedia.org/
- 2. Select a random link in the page
- 3. Navigate to the link
- 4. Repeat steps 2 to 3 until you have visited 10 different pages
- 5. Take a snapshot of the current page and save it
-
-Include the code of the walker and the snapshot in this document.
-
-## Answer
-
-Code également disponible [ici](../code/exo-1-wikipedia/src/main/java/fr/istic/ydewilde/App.java).
-
-```java
+/**
+ * Hello world!
+ *
+ */
 public class App {
     private static String SCREENSHOT_PATH = "./exo1_wikipedia_screenshot.png";
 
@@ -55,6 +52,3 @@ public class App {
         System.exit(0);
     }
 }
-```
-
-![Page Wikipedia après 10 répétitions](exo1_wikipedia_screenshot.png)

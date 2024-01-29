@@ -1,5 +1,9 @@
 # Practical Session #5: GUI Testing
 
+Yoann DEWILDE\
+Enora DANILO\
+M2 ILa - Groupe 1
+
 Solve the following exercises:
 
 

@@ -11,5 +11,3 @@ Optionally make a pull request to the project.
 Include in this document the code of the test and, if you did it, the link to the pull request.
 
 ## Answer
-
-

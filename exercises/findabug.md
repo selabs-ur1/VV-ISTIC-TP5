@@ -1,6 +1,6 @@
 ## Find a bug
 
-Clone the [Simba Organizer repository](https://github.com/selabs-ur1/doodle) and follow the instructions to run the application on your machine.
+Clone the [Simba Organizer repository](https://github.com/barais/doodlestudent/) and follow the instructions to run the application on your machine.
 
 Find a bug in the application. 
 

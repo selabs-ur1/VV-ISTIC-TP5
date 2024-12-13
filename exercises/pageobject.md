@@ -8,4 +8,4 @@ Write in this document the interface of a page object class for this page.
 
 ## Answer
 
-le code se trouve ici : [pollPage](../code/pollPage.py)
+le code se trouve ici : [pollPage](../code/PollPage.java)

@@ -12,3 +12,5 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+Le code est disponible dans le fichier `wikipedia.py` dans le dossier wikipedia.

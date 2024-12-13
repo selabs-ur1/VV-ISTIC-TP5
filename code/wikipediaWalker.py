@@ -1,60 +1,99 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import (
+    WebDriverException, 
+    StaleElementReferenceException
+)
 import random
 import time
 
-# Set up Selenium WebDriver options
-options = Options()
-options.add_argument('--headless')  # Run in headless mode
-options.add_argument('--disable-gpu')
-options.add_argument('--window-size=1920x1080')
+# Sélection dynamique du WebDriver
+try:
+    # Essayer différents drivers dans un ordre spécifique
+    drivers = [
+        webdriver.Firefox,  # Firefox par défaut
+        webdriver.Safari,   # Safari pour macOS
+        webdriver.Edge,     # Edge pour Windows
+        webdriver.Chrome    # Chrome comme dernier recours
+    ]
+            
+    driver = None
+    for driver_class in drivers:
+        try:
+            driver = driver_class()
+            break
+        except WebDriverException:
+            continue
+    if not driver:
+        raise WebDriverException("Aucun driver de navigateur disponible")
+            
+except Exception as e:
+    print(f"Erreur d'initialisation du driver : {e}")
+    raise
 
-# Initialize WebDriver (assuming GeckoDriver is in your PATH)
-service = Service('/usr/local/bin/geckodriver')  # Replace with the path to geckodriver if necessary
-driver = webdriver.Firefox(service=service, options=options)
+wait = WebDriverWait(driver, 10)
 
 try:
-    print("coucou1")
-    # Step 1: Navigate to the main Wikipedia page
+    # Step 1: Navigate to the main page
     driver.get("https://www.wikipedia.org/")
-
-    # Step 2-4: Walk through 10 random links
     visited_urls = set()
-    for _ in range(10):
-        print("coucou2")
-        # Find all links on the page
-        links = driver.find_elements(By.TAG_NAME, "a")
+    max_pages = 10
 
-        # Filter out links without href attributes
-        valid_links = [link.get_attribute("href") for link in links if link.get_attribute("href")]
-
-        # Choose a random link that hasn't been visited yet
-        random.shuffle(valid_links)
-        next_url = None
-        for link in valid_links:
-            if link.startswith("https://") and link not in visited_urls:
-                next_url = link
+    for _ in range(max_pages):
+        # Step 2: Find all links on the page
+        try:
+            links = driver.find_elements(By.XPATH, "//a[@href]")
+            
+            # Nouvelle vérification pour gérer les éléments obsolètes
+            valid_links = []
+            for link in links:
+                try:
+                    # Vérification supplémentaire pour éviter les éléments obsolètes
+                    if link.is_displayed() and 'href' in link.get_attribute('outerHTML'):
+                        valid_links.append(link)
+                except StaleElementReferenceException:
+                    # Ignorer les éléments devenus obsolètes
+                    continue
+            
+            if not valid_links:
+                print("No valid links found. Exiting.")
                 break
 
-        if not next_url:
-            print("No more unvisited links available. Stopping early.")
-            break
+            # Step 3: Select a random link and click it
+            next_link = random.choice(valid_links)
+            url = next_link.get_attribute("href")
 
-        # Visit the link
-        visited_urls.add(next_url)
-        driver.get(next_url)
-        time.sleep(2)  # Wait for the page to load
+            # Avoid revisiting the same page
+            if url in visited_urls:
+                continue
+            visited_urls.add(url)
 
-    # Step 5: Take a snapshot of the current page
-    snapshot_path = "wikipedia_snapshot.png"
-    driver.save_screenshot(snapshot_path)
-    print(f"Snapshot saved as {snapshot_path}")
+            # Navigate to the link
+            try:
+                # Essayer de cliquer normalement
+                next_link.click()
+            except StaleElementReferenceException:
+                # Si l'élément est devenu obsolète, réessayer de trouver et cliquer
+                try:
+                    # Retrouver le lien et cliquer
+                    driver.find_element(By.XPATH, f"//a[@href='{url}']").click()
+                except Exception:
+                    # Utiliser JavaScript comme dernière option
+                    driver.execute_script(f"window.location.href = '{url}'")
+            
+            time.sleep(2)  # Allow some time for the page to load
 
-except Exception as e:
-    print(f"An error occurred: {e}")
+        except StaleElementReferenceException:
+            # Gérer l'exception globalement si nécessaire
+            print("Stale element encountered. Retrying...")
+            continue
+
+    # Step 4: Take a snapshot of the last page
+    screenshot_path = "final_page_screenshot.png"
+    driver.save_screenshot(screenshot_path)
+    print(f"Snapshot saved to {screenshot_path}")
 
 finally:
-    # Close the WebDriver
+    # Close the browser
     driver.quit()

@@ -15,4 +15,4 @@ Include the code of the walker and the snapshot in this document.
 
 Le code du walker se trouve ici : [wikipediaWalker](../code/wikipediaWalker.py)
 
-Et voici le snapshot que nous avons obtenu ![snapshot](../code/wikipedia_snapshot.png)
+Et voici le snapshot que nous avons obtenu ![snapshot](../final_page_screenshot.png)

@@ -12,3 +12,7 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+Le code du walker se trouve ici : [wikipediaWalker](../code/wikipediaWalker.py)
+
+Et voici le snapshot que nous avons obtenu ![snapshot](../code/wikipedia_snapshot.png)

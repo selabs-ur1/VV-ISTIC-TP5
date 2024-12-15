@@ -12,3 +12,5 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+Tout le code et la capture d'écran se trouvent dans le dossier code/wikiWanderer/vv\_tp5. La capture est à la racine, nommée "last_page.png" et le code est dans le dossier "src/main/java/com/vv/tp5".

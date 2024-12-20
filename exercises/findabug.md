@@ -12,4 +12,6 @@ Include in this document the code of the test and, if you did it, the link to th
 
 ## Answer
 
+Nous avons trouvé un bug dans l'application, mais nous n'avons pas réussi à faire un cas de test utilisant Selenium qui parvienne à reproduire ce bug. Nous avons pris une capture vidéo du bug pour montrer ce que nous voulions faire. La vidéo se trouve avec ce chemin: "/code/FindABugInSimba/vv_tp5/" dans le repository.
 
+Tout comme pour WikipediaWanderer, nous avions des soucis de driver dûs à notre installation de Firefox (via snap) qui généraient des erreurs, nous avons été obligés de coder en dur des chemins vers un geckoDriver et un "binary" de Firefox téléchargés et stockés sur nos machines. Donc les codes risquent de ne pas fonctionner (étant donné que les chemins ne seront plus valides).
